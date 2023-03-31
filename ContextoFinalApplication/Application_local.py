@@ -38,7 +38,7 @@ def chooseform(languages):
     
     if (languageOption== 'العربية'):
         directory = os.getcwd()
-        guessesPath= directory + "/guesses.txt"
+        guessesPath= directory + "\\guesses.txt"
         ArabicContexto = createArabicEnviroment()
         ArabicForm(guessesPath,ArabicContexto)
         return 
@@ -46,14 +46,14 @@ def chooseform(languages):
     
     elif (languageOption== 'English'):
         directory = os.getcwd()
-        guessesPath= directory + "/guesses.txt"
+        guessesPath= directory + "\\guesses.txt"
         englishContexto= createEnglishEnvironment()
         EnglishForm(guessesPath, englishContexto)
         return
     else:
 
         directory = os.getcwd()
-        guessesPath= directory + "/guesses.txt"
+        guessesPath= directory + "\\guesses.txt"
         RussianContexto = createRussianEnviroment()
         RussianForm(guessesPath,RussianContexto)
         return
@@ -223,7 +223,7 @@ def show( guessesPath, guessWrite):
 
 def setNewTarget(language, new_taregt):
     directory = os.getcwd()
-    targetPath = directory +"/"+language+"Target.txt"
+    targetPath = directory +"\\"+language+"Target.txt"
     f = open(targetPath, "w",encoding="utf-8")
     f.write(new_taregt)
     f.close() 
@@ -240,9 +240,9 @@ def checkSimilarity(guess , contexto):
 def createEnglishEnvironment():
     bert_model_name= "bert-base-multilingual-cased"
     directory= os.getcwd()
-    wordsPath= directory + "/nouns_.txt"
+    wordsPath= directory + "\\nouns_.txt"
     available_words=[line.strip() for line in open(wordsPath, 'r')]
-    targetPath= directory + "/EnglishTarget.txt"
+    targetPath= directory + "\\EnglishTarget.txt"
     targetFile = open(targetPath, "r")
     target = targetFile.read()
     targetFile.close()
@@ -255,10 +255,10 @@ def createEnglishEnvironment():
 def createArabicEnviroment():
     bert_model_name = 'asafaya/bert-base-arabic'
     directory = os.getcwd()
-    wordsPath = directory + "/arabic_nouns.txt"
+    wordsPath = directory + "\\arabic_nouns.txt"
     
     available_words=[line.strip() for line in open(wordsPath, 'r',encoding="utf8")]
-    targetPath= directory + "/ArabicTarget.txt"
+    targetPath= directory + "\\ArabicTarget.txt"
     targetFile = open(targetPath, "r",encoding="utf8")
     target = targetFile.read()
     targetFile.close()
@@ -272,9 +272,9 @@ def createArabicEnviroment():
 def createRussianEnviroment():
     bert_model_name = 'DeepPavlov/rubert-base-cased'
     directory = os.getcwd()
-    wordsPath = directory + "/russian_nouns.txt"
+    wordsPath = directory + "\\russian_nouns.txt"
     available_words=[line.strip() for line in open(wordsPath, 'r',encoding="utf8")]
-    targetPath= directory + "/RussianTarget.txt"
+    targetPath= directory + "\\RussianTarget.txt"
     targetFile = open(targetPath, "r",encoding="utf8")
     target = targetFile.read()
     targetFile.close()
