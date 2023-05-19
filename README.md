@@ -1,5 +1,5 @@
 # Contexto-game
-in this repo I am trying to create the game of contexto using streamlit library, I implemented this game in English, Arabic, and Russian, using bret based models, and you can run this code using the "Deployment" file, in this repo
+in this repo I created the game of contexto using streamlit library, I implemented this game in English, Arabic, and Russian, using bret based models, and you can run this code using the "Deployment" file, in this repo
 
 
 
