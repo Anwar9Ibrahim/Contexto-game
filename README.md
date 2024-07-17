@@ -1,5 +1,7 @@
 # Contexto-game
-in this repo I created the game of contexto using streamlit library, I implemented this game in English, Arabic, and Russian, using bret based models, and you can run this code using the "Deployment" file, in this repo
+In this project:
+We developed an interactive multilingual Contexto game using BERT transformers and Streamlit, supporting Arabic, English, and Russian. The project showcases advanced NLP techniques and proficiency in deploying interactive applications. It includes deployment guidelines for ease of use and accessibility.
+P.s. you can run this code using the "Deployment" file, in this repo
 
 
 
